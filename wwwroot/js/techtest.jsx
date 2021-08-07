@@ -45,11 +45,9 @@ class MyForm extends React.Component {
         xhr.onload = function () {
             if (xhr.responseText == "True") {
                 alert("Verification code sent successfully!");
-
             }
         };
         this.setState({ butenable: true });
-
     };
     handleSubmit1 = () => {
         var xhr = new XMLHttpRequest();
@@ -69,7 +67,6 @@ class MyForm extends React.Component {
                 <Email show={this.state.temail} handleEmail2={this.handleEmail1} />
                 <VerificationCode show={this.state.tvcode} handleInputVcode2={this.handleInputVcode1} />
                 <Buttons disabled={this.state.butenable ? "" : "disabled"} handleSendVCode2={this.handleSendVCode1} handleSubmit2={this.handleSubmit1} />
-
             </div>
         )
     }
